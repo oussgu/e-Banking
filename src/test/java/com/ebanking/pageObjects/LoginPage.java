@@ -31,6 +31,9 @@ public class LoginPage {
 	@FindBy(name="btnLogin")
 	@CacheLookup
 	WebElement btnLogin;
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[15]/a")
+	@CacheLookup
+	WebElement lnkLogout;
 	
 	//All Methods 
 	
@@ -45,6 +48,11 @@ public class LoginPage {
 	public void clickSubm( ) {
 		
 	    btnLogin.click();}
+	
+	public void clickLogout()
+	{
+		lnkLogout.click();
+	}
 	
 	
 	
