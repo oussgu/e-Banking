@@ -2,6 +2,8 @@ package com.ebanking.testCases;
 
 
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import com.ebanking.pageObjects.BaseClass;
@@ -12,7 +14,7 @@ import junit.framework.Assert;
 public class TC_LoginTest_001 extends BaseClass{
 	
 	@Test
-	public void LoginTest() {
+	public void LoginTest() throws IOException {
 		
 		logger.info("get URL from ");
 		
@@ -28,9 +30,9 @@ public class TC_LoginTest_001 extends BaseClass{
 		
 		//
 		
-	    String expectedTitle = "Guru99 Bank Manager HomePage";
+	    String expectedTitle = "Gkkkk";
 	    String actualTitle = driver.getTitle();
-	  
+	     logger.info(expectedTitle);
 		//
 	    logger.info("Verify that we are  logged in to HomePage ");
 	    
@@ -41,7 +43,8 @@ public class TC_LoginTest_001 extends BaseClass{
 		
 	}
 	  else {
-		  Assert.assertTrue(true);
+		  captureScreen(driver,"loginTest");
+		  Assert.assertTrue(false);
 		  logger.info("Fail to  Log to HomePage");
 	}
 	   
