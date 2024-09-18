@@ -29,10 +29,11 @@ public class TC_LoginDDT_002 extends BaseClass
 		
 		if(isAlertPresent()==true)
 		{
-			 captureScreen(driver,"loginDDT");
+			 
 			driver.switchTo().alert().accept();//close alert
 			driver.switchTo().defaultContent();
 			Assert.assertTrue(false);
+			
 			logger.warn("Login failed");
 		}
 		else
@@ -50,15 +51,16 @@ public class TC_LoginDDT_002 extends BaseClass
 	}
 	
 	
-	public boolean isAlertPresent() //user defined method created to check alert is presetn or not
+	public boolean isAlertPresent() throws IOException //user defined method created to check alert is presetn or not
 	{
 		try
 		{
+			
 		driver.switchTo().alert();
 		return true;
 		}
 		catch(NoAlertPresentException e)
-		{
+		{   
 			return false;
 		}
 		
