@@ -1,46 +1,44 @@
-2024-09-17 17:38:20,946 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
-2024-09-17 17:38:23,541 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
-2024-09-17 17:38:23,556 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
-2024-09-17 17:38:24,230 - ebanking -INFO -  Verify that the title of the page is as expected 
-2024-09-17 17:38:24,237 - ebanking -INFO - Actual Title: Guru99 Bank Manager HomePage
-2024-09-17 17:38:24,238 - ebanking -INFO - expected Title: Guru99 Bank Manager HomePage
-2024-09-17 17:38:24,238 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
-2024-09-17 17:38:24,239 - ebanking -INFO - succeffuly Logged to HomePage
-2024-09-17 17:39:46,559 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
-2024-09-17 17:39:48,270 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
-2024-09-17 17:39:48,285 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
-2024-09-17 17:39:48,983 - ebanking -INFO -  Verify that the title of the page is as expected 
-2024-09-17 17:39:48,991 - ebanking -INFO - Actual Title: Guru99 Bank Manager HomePage
-2024-09-17 17:39:48,991 - ebanking -INFO - expected Title: Guru99 Bank Manager HomePage
-2024-09-17 17:39:48,991 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
-2024-09-17 17:39:48,993 - ebanking -INFO - successfully Logged to HomePage
-2024-09-17 18:16:42,933 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
-2024-09-17 18:16:49,801 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
-2024-09-17 18:16:49,815 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
-2024-09-17 18:18:08,525 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
-2024-09-17 18:18:20,025 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
-2024-09-17 18:18:20,055 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
-2024-09-17 18:19:35,160 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
-2024-09-17 18:19:36,572 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
-2024-09-17 18:19:36,587 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
-2024-09-17 18:19:37,331 - ebanking -INFO -  Verify that the title of the page is as expected 
-2024-09-17 18:19:37,337 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
-2024-09-17 18:19:37,339 - ebanking -INFO - successfully Logged to HomePage
-2024-09-17 19:58:42,848 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
-2024-09-17 19:58:45,114 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
-2024-09-17 19:58:45,133 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
-2024-09-17 19:58:46,033 - ebanking -INFO -  Verify that the title of the page is as expected 
-2024-09-17 19:58:46,040 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
-2024-09-17 19:58:46,042 - ebanking -INFO - successfully Logged to HomePage
-2024-09-17 20:00:12,560 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
-2024-09-17 20:00:14,559 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
-2024-09-17 20:00:14,574 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
-2024-09-17 20:00:15,299 - ebanking -INFO -  Verify that the title of the page is as expected 
-2024-09-17 20:00:15,305 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
-2024-09-17 20:00:15,306 - ebanking -INFO - successfully Logged to HomePage
-2024-09-17 20:14:38,378 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
-2024-09-17 20:14:42,753 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
-2024-09-17 20:14:42,775 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
-2024-09-17 20:14:43,848 - ebanking -INFO -  Verify that the title of the page is as expected 
-2024-09-17 20:14:43,851 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
-2024-09-17 20:14:43,854 - ebanking -INFO - successfully Logged to HomePage
+2024-09-18 14:42:10,146 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
+2024-09-18 14:42:14,105 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
+2024-09-18 14:42:14,127 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
+2024-09-18 14:42:14,888 - ebanking -INFO -  Verify that the title of the page is as expected 
+2024-09-18 14:42:14,892 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
+2024-09-18 14:42:14,894 - ebanking -INFO - successfully Logged to HomePage
+2024-09-18 15:15:11,167 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
+2024-09-18 15:15:13,126 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
+2024-09-18 15:15:13,147 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
+2024-09-18 15:15:13,938 - ebanking -INFO -  Verify that the title of the page is as expected 
+2024-09-18 15:15:13,946 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
+2024-09-18 15:15:13,949 - ebanking -INFO - successfully Logged to HomePage
+2024-09-18 15:31:45,347 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
+2024-09-18 15:31:47,096 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
+2024-09-18 15:31:47,120 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
+2024-09-18 15:31:48,049 - ebanking -INFO -  Verify that the title of the page is as expected 
+2024-09-18 15:31:48,058 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
+2024-09-18 15:31:48,061 - ebanking -INFO - successfully Logged to HomePage
+2024-09-18 15:32:53,450 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
+2024-09-18 15:32:56,183 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
+2024-09-18 15:32:56,197 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
+2024-09-18 15:32:56,853 - ebanking -INFO -  Verify that the title of the page is as expected 
+2024-09-18 15:32:56,862 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
+2024-09-18 15:32:56,864 - ebanking -INFO - successfully Logged to HomePage
+2024-09-18 15:35:50,509 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
+2024-09-18 15:35:52,342 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
+2024-09-18 15:35:52,362 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
+2024-09-18 15:35:53,115 - ebanking -INFO -  Verify that the title of the page is as expected 
+2024-09-18 15:35:53,123 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
+2024-09-18 15:35:53,126 - ebanking -INFO - successfully Logged to HomePage
+2024-09-18 15:37:02,870 - ebanking -INFO - get URL from BaseClass that we have already  because it extends 
+2024-09-18 15:37:04,677 - ebanking -INFO - Create LoginPage object so we can have the methods using constructor 
+2024-09-18 15:37:04,701 - ebanking -INFO - use methods from LoginPage and variables from BaseClass 
+2024-09-18 15:37:05,626 - ebanking -INFO -  Verify that the title of the page is as expected 
+2024-09-18 15:37:05,638 - ebanking -INFO - Verify with TestNg that we are logged in to HomePage 
+2024-09-18 15:37:05,640 - ebanking -INFO - successfully Logged to HomePage
+2024-09-18 16:25:08,652 - ebanking -INFO - get URL from 
+2024-09-18 16:25:08,679 - ebanking -INFO - set name and password and click login 
+2024-09-18 16:25:09,504 - ebanking -INFO - Verify that we are  logged in to HomePage 
+2024-09-18 16:25:09,507 - ebanking -INFO - successfully Logged to HomePage
+2024-09-18 16:26:14,864 - ebanking -INFO - get URL from 
+2024-09-18 16:26:14,913 - ebanking -INFO - set name and password and click login 
+2024-09-18 16:26:16,235 - ebanking -INFO - Verify that we are  logged in to HomePage 
+2024-09-18 16:26:16,238 - ebanking -INFO - successfully Logged to HomePage

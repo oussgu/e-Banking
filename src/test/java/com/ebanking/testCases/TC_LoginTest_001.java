@@ -12,27 +12,27 @@ import junit.framework.Assert;
 public class TC_LoginTest_001 extends BaseClass{
 	
 	@Test
-	public void LoginTest() throws InterruptedException{
+	public void LoginTest() {
 		
-		logger.info("get URL from BaseClass that we have already  because it extends ");
+		logger.info("get URL from ");
 		
-		driver.get(baseURL);
+		
 		//
-	   logger.info("Create LoginPage object so we can have the methods using constructor ");
+	  
 		LoginPage lp = new LoginPage(driver);
 		//
-		logger.info("use methods from LoginPage and variables from BaseClass ");
+		logger.info("set name and password and click login ");
 		lp.setUserName(userName);
 		lp.setPassword(password);
 		lp.clickSubm();
 		
 		//
-		logger.info(" Verify that the title of the page is as expected ");
+		
 	    String expectedTitle = "Guru99 Bank Manager HomePage";
 	    String actualTitle = driver.getTitle();
 	  
 		//
-	    logger.info("Verify with TestNg that we are logged in to HomePage ");
+	    logger.info("Verify that we are  logged in to HomePage ");
 	    
 	  if (actualTitle.equals(expectedTitle)) {
 		Assert.assertTrue(true);

@@ -10,7 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-import com.ebanking.utilites.ReadConfig;
+import com.ebanking.utilities.ReadConfig;
 
 import org.apache.log4j.Logger;
 
@@ -26,12 +26,7 @@ public class BaseClass {
 	public static WebDriver driver ;
 	public   Logger logger = Logger.getLogger("ebanking");
 	
-	
-	
-	
-	
-	
-	
+
 	@Parameters("browser")
 	@BeforeClass
 	public  void setup( String br ) {
@@ -68,7 +63,7 @@ public class BaseClass {
 			
 		}
 		
-		
+		driver.get(baseURL);
 		
 	}
 	
