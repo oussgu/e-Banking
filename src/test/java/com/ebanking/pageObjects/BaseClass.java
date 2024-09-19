@@ -72,7 +72,7 @@ public class BaseClass {
 		driver.get(baseURL);
 		
 	}
-	public void captureScreen(WebDriver driver, String tname) throws IOException {
+	public void captureScreenshot(WebDriver driver, String tname) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		File target = new File(System.getProperty("user.dir") + "/Screenshots/" + tname + ".png");
@@ -85,6 +85,7 @@ public class BaseClass {
 	public void tearDown() {
 		
 	//driver.quit();
+		
 		
 	}
 	

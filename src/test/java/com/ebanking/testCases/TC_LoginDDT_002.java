@@ -3,7 +3,9 @@ package com.ebanking.testCases;
 
 import java.io.IOException;
 
+
 import org.openqa.selenium.NoAlertPresentException;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -29,7 +31,9 @@ public class TC_LoginDDT_002 extends BaseClass
 		
 		if(isAlertPresent()==true)
 		{
-			 
+			
+			
+			
 			driver.switchTo().alert().accept();//close alert
 			driver.switchTo().defaultContent();
 			Assert.assertTrue(false);

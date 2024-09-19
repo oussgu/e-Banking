@@ -1,8 +1,16 @@
 package com.ebanking.utilities;
+import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+
 import java.util.Date;
+
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.io.FileHandler;
 
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -17,6 +25,8 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.ebanking.pageObjects.BaseClass;
+
 
 
 
@@ -24,9 +34,14 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 //Listener Class to generate reports
 public class Reporting extends TestListenerAdapter {
 	
+	
+	
 	public ExtentHtmlReporter htmlReporter;
+	private String htmlReporter2;
 	public ExtentReports extent;
 	public ExtentTest logger;
+
+	
 	
 	
 	public void onStart(ITestContext testContext)
@@ -36,6 +51,7 @@ public class Reporting extends TestListenerAdapter {
 		
 		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/test-output/"+repName);//specify location of the report
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
+		 htmlReporter2= System.getProperty("user.dir")+ "/test-output/"+repName;
 		
 		extent=new ExtentReports();
 		
@@ -57,27 +73,46 @@ public class Reporting extends TestListenerAdapter {
 		logger.log(Status.PASS,MarkupHelper.createLabel(tr.getName(),ExtentColor.GREEN)); // send the passed information to the report with GREEN color highlighted
 	}
 	
-	public void onTestFailure(ITestResult tr)
+	public void onTestFailure(ITestResult tr) 
 	{
-		logger=extent.createTest(tr.getName()); // create new entry in the report
-		logger.log(Status.FAIL,MarkupHelper.createLabel(tr.getName(),ExtentColor.RED)); // send the passed information to the report with GREEN color highlighted
-		
-		String screenshotPath=System.getProperty("user.dir")+"\\Screenshots\\"+tr.getName()+".png";
-		
-		File f = new File(screenshotPath); 
-		
-		if(f.exists())
-		{
-		try {
-			logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(screenshotPath));
-			} 
-		catch (IOException e) 
-				{
-				e.printStackTrace();
+	    logger = extent.createTest(tr.getName()); // create new entry in the report
+	    logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED)); // send the passed information to the report with Red color highlighted
+
+	    WebDriver driver = BaseClass.driver;
+	     
+	        // Take a screenshot
+	     String  screenshotPath1 = captureScreenshot(driver, tr.getName());
+	        File f = new File(screenshotPath1); 
+
+	        if(f.exists()) {
+	            try {
+					logger.fail("Screenshot of the alert is below:" + logger.addScreenCaptureFromPath(screenshotPath1));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-		}
-		
+	            }
+	
+	    }
+	
+
+	
+	
+	public String captureScreenshot(WebDriver driver, String testName) {
+	    TakesScreenshot ts = (TakesScreenshot) driver;
+	    File source = ts.getScreenshotAs(OutputType.FILE);
+	    String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+	    String destination = System.getProperty("user.dir") + File.separator + "Screenshots" + File.separator + testName + "_" + timeStamp +".png";
+	    File finalDestination = new File(destination);
+	    try {
+	        FileHandler.copy(source, finalDestination);
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	    return destination;
 	}
+	
+	
 	
 	public void onTestSkipped(ITestResult tr)
 	{
@@ -87,7 +122,24 @@ public class Reporting extends TestListenerAdapter {
 	
 	public void onFinish(ITestContext testContext)
 	{
+		
 		extent.flush();
+	
+	          
+		 File reportFile = new File(htmlReporter2);
+	        
+	        if (reportFile.exists()) {
+	            try {
+	                Desktop.getDesktop().browse(reportFile.toURI());
+	            } catch (IOException e) {
+	                e.printStackTrace();
+	            }
+	        } else {
+	            System.out.println("Le fichier de rapport n'existe pas.");
+	        }
+	         
+		
+		
 	}
 	
 	

@@ -43,7 +43,7 @@ public class TC_LoginTest_001 extends BaseClass{
 		
 	}
 	  else {
-		  captureScreen(driver,"loginTest");
+		  captureScreenshot(driver,"loginTest");
 		  Assert.assertTrue(false);
 		  logger.info("Fail to  Log to HomePage");
 	}
