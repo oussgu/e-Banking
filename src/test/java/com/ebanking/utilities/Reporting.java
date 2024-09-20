@@ -35,14 +35,15 @@ import com.ebanking.pageObjects.BaseClass;
 public class Reporting extends TestListenerAdapter {
 	
 	
-	
+	 
 	public ExtentHtmlReporter htmlReporter;
 	private String htmlReporter2;
 	public ExtentReports extent;
 	public ExtentTest logger;
 
 	
-	
+	 BaseClass bs = new BaseClass();
+	public WebDriver driver = BaseClass.driver;
 	
 	public void onStart(ITestContext testContext)
 	{
@@ -51,7 +52,7 @@ public class Reporting extends TestListenerAdapter {
 		
 		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/test-output/"+repName);//specify location of the report
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
-		 htmlReporter2= System.getProperty("user.dir")+ "/test-output/"+repName;
+		 htmlReporter2= System.getProperty("user.dir")+ "/test-output/"+repName;//location of the Report
 		
 		extent=new ExtentReports();
 		
@@ -71,6 +72,23 @@ public class Reporting extends TestListenerAdapter {
 	{
 		logger=extent.createTest(tr.getName()); // create new entry in the report
 		logger.log(Status.PASS,MarkupHelper.createLabel(tr.getName(),ExtentColor.GREEN)); // send the passed information to the report with GREEN color highlighted
+		 
+		     
+	        // Take a screenshot
+	     String  screenshotPath1 = captureScreenshot(driver, tr.getName());
+	        File f = new File(screenshotPath1); 
+
+	        if(f.exists()) {
+	            try {
+					logger.pass("Screenshot of the alert is below:" + logger.addScreenCaptureFromPath(screenshotPath1));
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	            }
+		
+		
 	}
 	
 	public void onTestFailure(ITestResult tr) 
@@ -78,7 +96,7 @@ public class Reporting extends TestListenerAdapter {
 	    logger = extent.createTest(tr.getName()); // create new entry in the report
 	    logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED)); // send the passed information to the report with Red color highlighted
 
-	    WebDriver driver = BaseClass.driver;
+	  
 	     
 	        // Take a screenshot
 	     String  screenshotPath1 = captureScreenshot(driver, tr.getName());
@@ -125,7 +143,7 @@ public class Reporting extends TestListenerAdapter {
 		
 		extent.flush();
 	
-	          
+	          //open Report after the test 
 		 File reportFile = new File(htmlReporter2);
 	        
 	        if (reportFile.exists()) {

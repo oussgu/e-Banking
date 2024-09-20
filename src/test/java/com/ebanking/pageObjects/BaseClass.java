@@ -34,6 +34,7 @@ public class BaseClass {
 	
 
 	@Parameters("browser")
+	
 	@BeforeClass
 	public  void setup( String br ) {
 	
@@ -80,11 +81,13 @@ public class BaseClass {
 		System.out.println("Screenshot taken");
 	}
 
-	
+	 public WebDriver getDriver() {
+	        return driver;
+	    }
 	@AfterClass
 	public void tearDown() {
 		
-	//driver.quit();
+	driver.quit();
 		
 		
 	}

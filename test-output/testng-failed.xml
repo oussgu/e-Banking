@@ -7,6 +7,13 @@
   <test thread-count="5" name="BankingApp Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="com.ebanking.testCases.TC_AddCustomerTest_003">
+        <methods>
+          <include name="setup"/>
+          <include name="addNewCustomer"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ebanking.testCases.TC_AddCustomerTest_003 -->
       <class name="com.ebanking.testCases.TC_LoginDDT_002">
         <methods>
           <include name="setup"/>
@@ -14,6 +21,13 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.ebanking.testCases.TC_LoginDDT_002 -->
+      <class name="com.ebanking.testCases.TC_LoginTest_001">
+        <methods>
+          <include name="setup"/>
+          <include name="LoginTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ebanking.testCases.TC_LoginTest_001 -->
     </classes>
   </test> <!-- BankingApp Test(failed) -->
 </suite> <!-- Failed suite [e-bankingv1] -->

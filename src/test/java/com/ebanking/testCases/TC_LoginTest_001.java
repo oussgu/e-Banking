@@ -4,6 +4,7 @@ package com.ebanking.testCases;
 
 import java.io.IOException;
 
+
 import org.testng.annotations.Test;
 
 import com.ebanking.pageObjects.BaseClass;
@@ -20,7 +21,7 @@ public class TC_LoginTest_001 extends BaseClass{
 		
 		
 		//
-	  
+	   
 		LoginPage lp = new LoginPage(driver);
 		//
 		logger.info("set name and password and click login ");
