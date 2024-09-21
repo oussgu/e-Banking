@@ -14,6 +14,7 @@ import org.testng.annotations.Parameters;
 
 import com.ebanking.utilities.ReadConfig;
 
+
 import java.io.File;
 import java.io.IOException;
 
@@ -29,8 +30,11 @@ public class BaseClass {
 	public String baseURL = readconfig.getApplicationURL();
 	public String userName = readconfig.getUsername();
 	public String password = readconfig.getPassword();
+	
 	public static WebDriver driver ;
+
 	public   Logger logger = Logger.getLogger("ebanking");
+
 	
 
 	@Parameters("browser")
@@ -44,6 +48,7 @@ public class BaseClass {
 			PropertyConfigurator.configure("log4j.properties");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
+			
 		
 			
 		}
@@ -73,6 +78,8 @@ public class BaseClass {
 		driver.get(baseURL);
 		
 	}
+	
+	
 	public void captureScreenshot(WebDriver driver, String tname) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
@@ -81,9 +88,16 @@ public class BaseClass {
 		System.out.println("Screenshot taken");
 	}
 
-	 public WebDriver getDriver() {
-	        return driver;
-	    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@AfterClass
 	public void tearDown() {
 		

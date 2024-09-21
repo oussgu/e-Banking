@@ -31,6 +31,7 @@ import com.ebanking.pageObjects.BaseClass;
 
 
 
+
 //Listener Class to generate reports
 public class Reporting extends TestListenerAdapter {
 	
@@ -42,11 +43,14 @@ public class Reporting extends TestListenerAdapter {
 	public ExtentTest logger;
 
 	
-	 BaseClass bs = new BaseClass();
-	public WebDriver driver = BaseClass.driver;
+	  // Make this non-static and pass driver
+
+	    // Modify constructor or setter to pass WebDriver instance
+	 
 	
 	public void onStart(ITestContext testContext)
 	{
+		 
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());//time stamp
 		String repName="Test-Report-"+timeStamp+".html";
 		
@@ -70,29 +74,19 @@ public class Reporting extends TestListenerAdapter {
 	
 	public void onTestSuccess(ITestResult tr)
 	{
+		
 		logger=extent.createTest(tr.getName()); // create new entry in the report
 		logger.log(Status.PASS,MarkupHelper.createLabel(tr.getName(),ExtentColor.GREEN)); // send the passed information to the report with GREEN color highlighted
 		 
 		     
-	        // Take a screenshot
-	     String  screenshotPath1 = captureScreenshot(driver, tr.getName());
-	        File f = new File(screenshotPath1); 
-
-	        if(f.exists()) {
-	            try {
-					logger.pass("Screenshot of the alert is below:" + logger.addScreenCaptureFromPath(screenshotPath1));
-					
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-	            }
+	  
 		
 		
 	}
 	
 	public void onTestFailure(ITestResult tr) 
 	{
+		WebDriver driver = BaseClass.driver;
 	    logger = extent.createTest(tr.getName()); // create new entry in the report
 	    logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED)); // send the passed information to the report with Red color highlighted
 
@@ -159,6 +153,8 @@ public class Reporting extends TestListenerAdapter {
 		
 		
 	}
+
+	
 	
 	
 

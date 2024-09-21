@@ -31,7 +31,7 @@ public class TC_LoginTest_001 extends BaseClass{
 		
 		//
 		
-	    String expectedTitle = "Gkkkk";
+	    String expectedTitle = "Guru99 Bank Manager HomePage";
 	    String actualTitle = driver.getTitle();
 	     logger.info(expectedTitle);
 		//
@@ -44,7 +44,7 @@ public class TC_LoginTest_001 extends BaseClass{
 		
 	}
 	  else {
-		  captureScreenshot(driver,"loginTest");
+		
 		  Assert.assertTrue(false);
 		  logger.info("Fail to  Log to HomePage");
 	}

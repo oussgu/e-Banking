@@ -142,11 +142,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;e-bankingv1&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite name=&quot;e-bankingv1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.ebanking.utilities.Reporting&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;BankingApp Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;BankingApp Test&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.ebanking.testCases.TC_LoginTest_001&quot;/&gt;
@@ -193,12 +193,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LoginTest')
 data.setCell(0, 2, 'com.ebanking.testCases.TC_LoginTest_001')
-data.setCell(0, 3, 1076);
+data.setCell(0, 3, 958);
 window.suiteTableData['e_bankingv1']= { tableData: data, tableDiv: 'times-div-e_bankingv1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 958 ms</span>
               <div id="times-div-e_bankingv1">
               </div> <!-- times-div-e_bankingv1 -->
             </div> <!-- times-div -->
@@ -231,11 +231,11 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">LoginTest</span>
-                <span class="method-start">3717 ms</span>
+                <span class="method-start">3711 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4807 ms</span>
+                <span class="method-start">4681 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
