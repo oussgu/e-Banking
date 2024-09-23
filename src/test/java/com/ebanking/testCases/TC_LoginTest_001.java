@@ -4,7 +4,6 @@ package com.ebanking.testCases;
 
 import java.io.IOException;
 
-
 import org.testng.annotations.Test;
 
 import com.ebanking.pageObjects.BaseClass;
@@ -17,7 +16,9 @@ public class TC_LoginTest_001 extends BaseClass{
 	@Test
 	public void LoginTest() throws IOException {
 		
+	
 		logger.info("get URL from ");
+		
 		
 		
 		//

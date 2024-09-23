@@ -18,6 +18,7 @@ import com.ebanking.utilities.ReadConfig;
 import java.io.File;
 import java.io.IOException;
 
+
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 
@@ -43,11 +44,15 @@ public class BaseClass {
 	public  void setup( String br ) {
 	
 		if(br.equals("chrome")) {
+			
 			System.setProperty("webdriver.chrome.driver",readconfig.getChrome());
 			
 			PropertyConfigurator.configure("log4j.properties");
+			
+			
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
+			
 			
 		
 			

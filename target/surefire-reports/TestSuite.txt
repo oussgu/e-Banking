@@ -1,4 +1,40 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.77 s - in TestSuite
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 10.432 s <<< FAILURE! - in TestSuite
+com.ebanking.testCases.TC_LoginDDT_002.loginDDT[mngr83460, qAbUzyj](2)  Time elapsed: 0.865 s  <<< FAILURE!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : User is not valid}
+  (Session info: chrome=129.0.6668.58): User is not valid
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [394f7e60febd19bde0e6cbbee442cdc1, findElement {value=/html/body/div[3]/div/ul/li[15]/a, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\oussa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63471}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63471/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 394f7e60febd19bde0e6cbbee442cdc1
+	at com.ebanking.testCases.TC_LoginDDT_002.loginDDT(TC_LoginDDT_002.java:53)
+
+com.ebanking.testCases.TC_LoginDDT_002.loginDDT[mngr137319, bAdYvyb](3)  Time elapsed: 0.852 s  <<< FAILURE!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : User is not valid}
+  (Session info: chrome=129.0.6668.58): User is not valid
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [394f7e60febd19bde0e6cbbee442cdc1, findElement {value=/html/body/div[3]/div/ul/li[15]/a, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\oussa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63471}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63471/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 394f7e60febd19bde0e6cbbee442cdc1
+	at com.ebanking.testCases.TC_LoginDDT_002.loginDDT(TC_LoginDDT_002.java:53)
+
+com.ebanking.testCases.TC_LoginDDT_002.loginDDT[mngr164225, jahetAp](4)  Time elapsed: 0.93 s  <<< FAILURE!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : User is not valid}
+  (Session info: chrome=129.0.6668.58): User is not valid
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [394f7e60febd19bde0e6cbbee442cdc1, findElement {value=/html/body/div[3]/div/ul/li[15]/a, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\oussa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63471}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63471/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 394f7e60febd19bde0e6cbbee442cdc1
+	at com.ebanking.testCases.TC_LoginDDT_002.loginDDT(TC_LoginDDT_002.java:53)
+
